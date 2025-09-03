@@ -1,0 +1,20 @@
+spring:
+  application:
+    name: Clients API
+  datasource:
+    url: jdbc:h2:mem:clients
+    username: sa
+    password:
+  jpa:
+    hibernate:
+      ddl-auto: none
+    database-platform: org.hibernate.dialect.H2Dialect
+  h2:
+    console:
+      enabled: true
+      path: /h2-console
+
+security:
+  jwt:
+    secret: mySuperSecretKey123456
+    expiration: 3600000
