@@ -8,3 +8,10 @@ create table clients (
     created_at timestamp not null,
     updated_at timestamp not null
 );
+
+create table users (
+    id bigint auto_increment primary key,
+    username varchar(50) not null unique,
+    password varchar(255) not null,
+    is_admin boolean not null
+);

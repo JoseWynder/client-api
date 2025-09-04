@@ -14,6 +14,7 @@ import io.swagger.v3.oas.annotations.responses.ApiResponses;
 import io.swagger.v3.oas.annotations.tags.Tag;
 import jakarta.validation.Valid;
 import lombok.RequiredArgsConstructor;
+import org.springdoc.core.annotations.ParameterObject;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
 import org.springframework.http.ResponseEntity;
@@ -24,7 +25,7 @@ import java.net.URI;
 import java.time.LocalDate;
 
 @RestController
-@RequestMapping("/clients")
+@RequestMapping("/api/clients")
 @RequiredArgsConstructor
 @Tag(name = "Clients", description = "Manage clients")
 public class ClientController {
@@ -56,7 +57,6 @@ public class ClientController {
     }
 
 
-
     @GetMapping("/{id}")
     @Operation(summary = "Get client by ID")
     @ApiResponses(value = {
@@ -72,7 +72,7 @@ public class ClientController {
 
     @GetMapping
     @Operation(summary = "Get all clients (paginated)")
-    public ResponseEntity<Page<ClientResponseDTO>> getAllClients(Pageable pageable) {
+    public ResponseEntity<Page<ClientResponseDTO>> getAllClients(@ParameterObject Pageable pageable) {
         Page<ClientResponseDTO> clients = clientService.getAllClients(pageable)
                 .map(clientMapper::toDTO);
         return ResponseEntity.ok(clients);
@@ -86,7 +86,7 @@ public class ClientController {
             @RequestParam(required = false, value = "birth-date") LocalDate birthDate,
             @RequestParam(required = false) String email,
             @RequestParam(required = false) String phone,
-            Pageable pageable
+            @ParameterObject Pageable pageable
     ) {
         Page<ClientResponseDTO> result = clientService
                 .searchClients(name, cpf, birthDate, email, phone, pageable)

@@ -16,5 +16,5 @@ spring:
 
 security:
   jwt:
-    secret: mySuperSecretKey123456
+    signing-key: V3WNdstGAyT35CUnZNDMLjcM5dtk1dFUCesi9y8sKpfNP6qmw290Fsi/Wj+G+qrPepQhHxPtv2a3MSQk22y9Qw==
     expiration: 3600000

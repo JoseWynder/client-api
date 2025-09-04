@@ -2,6 +2,7 @@ package com.josewynder.neoapp.clientapi.exception;
 
 import com.josewynder.neoapp.clientapi.dto.ErrorResponseDTO;
 import com.josewynder.neoapp.clientapi.dto.FieldErrorDTO;
+import com.josewynder.neoapp.clientapi.security.exception.InvalidPasswordException;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.MethodArgumentNotValidException;
@@ -34,6 +35,12 @@ public class GlobalExceptionHandler {
                 .toList();
 
         return ResponseEntity.badRequest().body(ErrorResponseDTO.fromValidationErrors(fieldErrors));
+    }
+
+    @ExceptionHandler(InvalidPasswordException.class)
+    public ResponseEntity<ErrorResponseDTO> handleInvalidPassword(InvalidPasswordException ex) {
+        return ResponseEntity.status(HttpStatus.FORBIDDEN)
+                .body(ErrorResponseDTO.of(HttpStatus.FORBIDDEN, "Forbidden", ex.getMessage()));
     }
 
     @ExceptionHandler(Exception.class)
