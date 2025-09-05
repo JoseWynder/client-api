@@ -17,7 +17,7 @@ A aplicação expõe uma API REST para cadastro e gerenciamento de clientes (CRU
 ---
 
 ## Como executar
-1. Clone o repositório e abra em uma IDE ou execute via Maven:
+1. Clone o repositório e abra em uma IDE ou execute via Maven na raiz do projeto:
    ```bash
    mvn spring-boot:run
    ```
@@ -52,11 +52,12 @@ A API utiliza **JWT** para autenticação.
 ## Endpoints principais
 
 ### Clients
-- `POST /api/clients` → cria novo cliente  
-- `GET /api/clients/{id}` → busca cliente por ID  
-- `PUT /api/clients/{id}` → atualiza cliente existente  
-- `DELETE /api/clients/{id}` → remove cliente  
-- `GET /api/clients` → lista clientes (paginação e filtros disponíveis por atributos)
+- `POST /api/clients` → cria novo cliente
+- `GET /api/clients/{id}` → busca cliente por ID
+- `PUT /api/clients/{id}` → atualiza cliente existente
+- `DELETE /api/clients/{id}` → remove cliente
+- `GET /api/clients` → lista todos os clientes (com paginação)
+- `GET /api/clients/search` → busca avançada com filtros (com paginação)
 
 ### Users / Auth
 - `POST /api/users/auth` → autenticação e geração de token JWT  
