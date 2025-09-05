@@ -31,7 +31,7 @@ A aplicação expõe uma API REST para cadastro e gerenciamento de clientes (CRU
    ```
 
    > **Observação:** A URL da nuvem é temporária e será substituída quando a aplicação sair de produção.  
-   > As requisições podem demorar um pouco mais que o normal, especialmente na primeira chamada, devido à inicialização do servidor. Isso é comportamento do ambiente e não da aplicação.
+   > As requisições podem demorar mais do que o normal, especialmente na primeira chamada, devido à inicialização do servidor. Isso é comportamento do ambiente e não da aplicação.
 
 
 ---
