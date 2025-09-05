@@ -25,6 +25,14 @@ A aplicação expõe uma API REST para cadastro e gerenciamento de clientes (CRU
    ```
    http://localhost:8080
    ```
+3. Caso queira acessar a API diretamente na nuvem, utilize a URL:
+   ```
+   https://client-api-3r7c.onrender.com
+   ```
+
+   > **Observação:** A URL da nuvem é temporária e será substituída quando a aplicação sair de produção.  
+   > As requisições podem demorar um pouco mais que o normal, especialmente na primeira chamada, devido à inicialização do servidor. Isso é comportamento do ambiente e não da aplicação.
+
 
 ---
 
@@ -65,7 +73,7 @@ A API utiliza **JWT** para autenticação.
 ---
 
 ## Banco de dados
-- Utiliza **H2 em memória**  
+- Utiliza H2 em memória 
 - Scripts `schema.sql` e `data.sql` já criam a estrutura e inserem registros iniciais  
 - Não é necessário configuração adicional
 
@@ -73,6 +81,6 @@ A API utiliza **JWT** para autenticação.
 
 ## Documentação da API
 Swagger UI disponível em:
-```
-http://localhost:8080/swagger-ui/index.html
-```
+- Local: http://localhost:8080/swagger-ui/index.html
+- Nuvem: https://client-api-3r7c.onrender.com/swagger-ui/index.html
+  
