@@ -1,7 +1,7 @@
 # NeoApp - Clients API
 
 ## Descrição
-MVP desenvolvido como parte do desafio técnico da NeoApp para a vaga de Desenvolvedor Back-End Estagiário.  
+MVP desenvolvido como parte do desafio técnico da NeoApp para a vaga de Desenvolvedor Back-End.  
 A aplicação expõe uma API REST para cadastro e gerenciamento de clientes (CRUD completo), com autenticação baseada em JWT.
 
 ---
@@ -17,7 +17,7 @@ A aplicação expõe uma API REST para cadastro e gerenciamento de clientes (CRU
 ---
 
 ## Como executar
-1. Clone o repositório e abra em sua IDE ou execute via Maven:
+1. Clone o repositório e abra em uma IDE ou execute via Maven:
    ```bash
    mvn spring-boot:run
    ```
