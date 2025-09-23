@@ -1,7 +1,7 @@
-# NeoApp - Clients API
+# Desafio técnico - Clients API
 
 ## Descrição
-MVP desenvolvido como parte do desafio técnico da NeoApp para a vaga de Desenvolvedor Back-End.  
+MVP desenvolvido inspirado em um desafio técnico para uma vaga de desenvolvedor back-end.
 A aplicação expõe uma API REST para cadastro e gerenciamento de clientes (CRUD completo), com autenticação baseada em JWT.
 
 ---
@@ -31,7 +31,7 @@ A aplicação expõe uma API REST para cadastro e gerenciamento de clientes (CRU
    ```
 
    > **Observação:** A URL da nuvem é temporária e será substituída quando a aplicação sair de produção.  
-   > As requisições podem demorar mais do que o normal, especialmente na primeira chamada, devido à inicialização do servidor. Isso é comportamento do ambiente e não da aplicação.
+   > As requisições podem demorar mais do que o normal, principalmente na primeira chamada, devido à inicialização do servidor. Isso é comportamento do ambiente e não da aplicação.
 
 
 ---
