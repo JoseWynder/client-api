@@ -3,6 +3,14 @@ spring:
     name: Clients API
   profiles:
     active: prod
+  datasource:
+    url: jdbc:h2:mem:clients # Em produção normalmente seria utilizado um banco real, como Postgres.
+    username: sa
+    password:
+  jpa:
+    hibernate:
+      ddl-auto: none
+    database-platform: org.hibernate.dialect.H2Dialect
 
 # Chaves devem estar como variáveis de ambiente. Mantive fixas apenas para simplificar a execução do projeto.
 security:
